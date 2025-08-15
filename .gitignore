@@ -1,0 +1,45 @@
+# .NET build output
+bin/
+obj/
+
+# Visual Studio / Rider / VS Code settings
+.vs/
+.idea/
+.vscode/
+
+# User-specific files
+*.user
+*.suo
+
+# Logs
+*.log
+logs/git 
+*.tlog
+
+# Docker-specific
+.docker/
+docker-compose.override.yml
+
+# Environment files (secrets)
+.env
+.env.*
+
+# Temp files
+tmp/
+temp/
+
+# OS-specific
+Thumbs.db
+.DS_Store
+
+# Test results
+TestResult*/
+*.trx
+
+# Containers folder (local dev only)
+.containers/
+
+# Backup files
+*.bak
+*.swp
+*.tmp

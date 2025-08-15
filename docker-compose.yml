@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    image: grocery-inventory-api:sqlite
+    container_name: grocery_api
+    ports:
+      - "5050:8080"   # Host:Container
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__DefaultConnection: "Data Source=/data/grocery.db"
+      UseSqlite: "true"
+      Jwt__Issuer: "GroceryInventory"
+      Jwt__Audience: "GroceryInventoryClients"
+      Jwt__SecretKey: "${JWT_SECRET}"
+    volumes:
+      - ./.containers/sqlite:/data
